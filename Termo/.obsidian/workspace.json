@@ -1,0 +1,250 @@
+{
+  "main": {
+    "id": "3d57c8eaf7bfb4b9",
+    "type": "split",
+    "children": [
+      {
+        "id": "0848e52f575e10e7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c4ddbecc05a975e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mix.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Mix"
+            }
+          },
+          {
+            "id": "e44c8cb0f6456f31",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Soru.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Soru"
+            }
+          },
+          {
+            "id": "f94c98d2d11e3316",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Hauptsatz.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2. Hauptsatz"
+            }
+          },
+          {
+            "id": "2b09bb890d38449e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Misc.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Misc"
+            }
+          },
+          {
+            "id": "03f50e65b1b96a11",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1. Haupsatz.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. Haupsatz"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2f4c2978483b1007",
+    "type": "split",
+    "children": [
+      {
+        "id": "a703df6e0eea7473",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aa81f71e676fc728",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "2dd394d14d106a1e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f9d06aa0b5bcfa16",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "09825db41d120063",
+    "type": "split",
+    "children": [
+      {
+        "id": "3d597ca04f9fa50d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f62b34851f755046",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Mix.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Mix"
+            }
+          },
+          {
+            "id": "2e6c5d16e7da040c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Mix.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Mix"
+            }
+          },
+          {
+            "id": "47ce7fcee7f2df33",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "050318252849dc8f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Mix.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Mix"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "simple-note-review:Simple Note Review: Open Sidebar View": false,
+      "simple-note-review:Simple Note Review: Continue Review of Current Note Set": false
+    }
+  },
+  "active": "5c4ddbecc05a975e",
+  "lastOpenFiles": [
+    "Soru.md",
+    "2. Hauptsatz.md",
+    "Misc.md",
+    "Mix.md",
+    "1. Haupsatz.md",
+    "attachments/Pasted image 20250408104202.png",
+    "attachments/Pasted image 20250408104015.png",
+    "attachments/Pasted image 20250408102748.png",
+    "attachments/Pasted image 20250407154504.png",
+    "attachments/Pasted image 20250407112424.png",
+    "attachments/Pasted image 20250407112156.png",
+    "attachments/Pasted image 20250407101252.png",
+    "attachments/Pasted image 20250407101116.png",
+    "attachments/Pasted image 20250407095910.png",
+    "attachments/Pasted image 20250407095855.png",
+    "Satz von Schwarz.md",
+    "attachments",
+    "Welcome.md"
+  ]
+}

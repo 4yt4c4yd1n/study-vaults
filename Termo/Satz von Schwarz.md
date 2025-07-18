@@ -1,0 +1,1 @@
+# $\huge{dz = \left(\frac{{\partial z}}{\partial x}\right)_{y}dx + \left(\frac{{\partial z}}{\partial y}\right)_{y}dy} \quad \text{und}\quad \frac{{\partial^2z}}{\partial x\partial y} = \frac{{\partial^2z}}{\partial y\partial x}$

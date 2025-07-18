@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "1309263745cbf649",
+    "type": "split",
+    "children": [
+      {
+        "id": "ee85e116fc9ace3e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "72f85ed012ec3522",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0bbcdc59de182bff",
+    "type": "split",
+    "children": [
+      {
+        "id": "5e76f147577e33ab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d772ac77a5657edb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "837247216d60d1a6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "inter",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "a5bbbb3f48399cba",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "db576455c5fd957c",
+    "type": "split",
+    "children": [
+      {
+        "id": "6364e78b6b0c3063",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "00b6009fe1039e8c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "b123a20c1a1fc191",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "be6d5c988d463bfc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "4429a2331645af9b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Definitheit.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Definitheit"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "simple-note-review:Simple Note Review: Open Sidebar View": false,
+      "simple-note-review:Simple Note Review: Continue Review of Current Note Set": false
+    }
+  },
+  "active": "72f85ed012ec3522",
+  "lastOpenFiles": [
+    "Polynominterpolation.md",
+    "Lagrange.md",
+    "Definitheit.md",
+    "Allgemeine Loesung/Allgemeine Loesung.md",
+    "Invert.md",
+    "Verfahren.md",
+    "Singulärwertezerlegung.md",
+    "Orthogonale Matrix.md",
+    "attachments/Pasted image 20250328173636.png",
+    "Cholesky-Zerlegung.md",
+    "Quadratische Form.md",
+    "Normen.md",
+    "LR-Zerlegung.md",
+    "c leri unutma.md",
+    "Reelle Lösung.md",
+    "Aehnlichkeits-DGL.md",
+    "Typen.md",
+    "Substitution.md",
+    "attachments/Pasted image 20250328155426.png",
+    "attachments/Pasted image 20250328155418.png",
+    "attachments/Pasted image 20250328155305.png",
+    "Clairaut's.md",
+    "attachments/Pasted image 20250328155249.png",
+    "Homogenous.md",
+    "attachments/Pasted image 20250328155220.png",
+    "Exact.md",
+    "attachments/Pasted image 20250328155054.png",
+    "Bernoulli-DGL.md",
+    "Riccati-DGL.md",
+    "Variation der Konstanten.md",
+    "Greensche Funktion.md",
+    "attachments/Pasted image 20250328152209.png",
+    "attachments/Pasted image 20250328152152.png",
+    "Randwertproblem.md",
+    "Laplace.md",
+    "attachments/Pasted image 20250328131810.png",
+    "attachments",
+    "Allgemeine Loesung/attachments",
+    "Allgemeine Loesung"
+  ]
+}

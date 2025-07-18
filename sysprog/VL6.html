@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Management Mind Map</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        /* Custom styles for the tree structure */
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+            transition: all 0.5s;
+        }
+        .tree li {
+            float: left;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+            transition: all 0.5s;
+        }
+        /* We use ::before and ::after to draw the connectors */
+        .tree li::before, .tree li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 2px solid #cbd5e1; /* slate-300 */
+            width: 50%;
+            height: 20px;
+        }
+        .tree li::after {
+            right: auto;
+            left: 50%;
+            border-left: 2px solid #cbd5e1; /* slate-300 */
+        }
+        /* We need to remove left-right connectors from elements without any siblings */
+        .tree li:only-child::after, .tree li:only-child::before {
+            display: none;
+        }
+        /* Remove space from the top of single children */
+        .tree li:only-child {
+            padding-top: 0;
+        }
+        /* Remove left connector from first child and right connector from last child */
+        .tree li:first-child::before {
+            border: 0 none;
+        }
+        .tree li:last-child::after {
+            border: 0 none;
+        }
+        /* Adding back the vertical connector to the last child */
+        .tree li:last-child::before {
+            border-right: 2px solid #cbd5e1; /* slate-300 */
+            border-radius: 0 5px 0 0;
+        }
+        .tree li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+        /* Time to add downward connectors from parents */
+        .tree ul ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 2px solid #cbd5e1; /* slate-300 */
+            width: 0;
+            height: 20px;
+        }
+        .tree li a {
+            display: inline-block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #1e293b; /* slate-800 */
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            min-width: 120px;
+            transition: all 0.3s;
+        }
+        .tree li a:hover, .tree li a:hover+ul li a {
+            background: #ecfdf5; /* emerald-50 */
+            color: #065f46; /* emerald-800 */
+            border: 1px solid #6ee7b7; /* emerald-300 */
+        }
+        .tree li a:hover+ul li::after, .tree li a:hover+ul li::before, .tree li a:hover+ul ul::before {
+            border-color: #6ee7b7; /* emerald-300 */
+        }
+        .node-title {
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+        .node-desc {
+            font-size: 0.75rem;
+            color: #475569; /* slate-600 */
+        }
+        .main-node a {
+            background-color: #0f172a; /* slate-900 */
+            color: #ffffff;
+        }
+         .main-node a:hover, .main-node a:hover+ul li a {
+            background: #1e293b;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-slate-800">Memory Management Mind Map</h1>
+        <p class="text-slate-600 mt-2">A visual summary of the lecture concepts.</p>
+    </div>
+    <div class="tree w-full flex justify-center">
+        <ul>
+            <li class="main-node">
+                <a href="#">
+                    <div class="node-title text-lg">Memory Management</div>
+                    <div class="node-desc text-slate-300">Core OS Function</div>
+                </a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="node-title">Core Concepts</div>
+                            <div class="node-desc">Purpose & Allocation</div>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="node-title">Static Allocation</div>
+                                    <div class="node-desc">Fixed partitions, inefficient</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="node-title">Dynamic Allocation</div>
+                                    <div class="node-desc">On-demand, basis for VM</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="node-title">Virtual Memory</div>
+                            <div class="node-desc">Paging & Translation</div>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="node-title">Paging</div>
+                                    <div class="node-desc">Pages & Page Frames</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="node-title">Page Table</div>
+                                    <div class="node-desc">Maps virtual to physical</div>
+                                </a>
+                                <ul>
+                                    <li><a href="#"><div class="node-title">PTE Metadata</div><div class="node-desc">P, A/R, D/M, R/W/X, U/S</div></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="node-title">Address Translation</div>
+                                    <div class="node-desc">Virtual -> Physical</div>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="#">
+                                    <div class="node-title">Multi-Level Tables</div>
+                                    <div class="node-desc">Saves space for sparse memory</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="node-title">Management Policies</div>
+                            <div class="node-desc">Fetch & Replacement</div>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="node-title">Fetch Policies</div>
+                                    <div class="node-desc">Demand Paging, Pre-Paging</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="node-title">Replacement Policies</div>
+                                    <div class="node-desc">What to swap out</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="node-title">Replacement Algorithms</div>
+                            <div class="node-desc">Strategies to minimize page faults</div>
+                        </a>
+                        <ul>
+                            <li><a href="#"><div class="node-title">Optimal (OPT)</div><div class="node-desc">Benchmark, not realizable</div></a></li>
+                            <li><a href="#"><div class="node-title">FIFO</div><div class="node-desc">First-In, First-Out</div></a></li>
+                            <li><a href="#"><div class="node-title">LRU</div><div class="node-desc">Least Recently Used</div></a></li>
+                            <li><a href="#"><div class="node-title">LRU Approximations</div><div class="node-desc">Clock Algorithm</div></a></li>
+                        </ul>
+                    </li>
+                     <li>
+                        <a href="#">
+                            <div class="node-title">System Implementations</div>
+                            <div class="node-desc">Real-world examples</div>
+                        </a>
+                        <ul>
+                            <li><a href="#"><div class="node-title">Paging Daemon</div><div class="node-desc">Maintains free frames</div></a></li>
+                            <li><a href="#"><div class="node-title">Solaris 'pageout'</div><div class="node-desc">Two-handed clock</div></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+
