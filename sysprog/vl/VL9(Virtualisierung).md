@@ -95,3 +95,57 @@ beeinflussen können(sensitive), werden abgefangen und an Hypervisor weitergelei
 	Ja, modifiziert Hardware-Zustand (Zulassen von Interrupts).
 
 
+Gedankenexperiment 1: keine Virtualisierung
+- Annahmen:
+	- BS enthält sti-Instruktion
+	- Aktuell sind Interrupts maskiert (= Annahme deaktiviert)
+	- BS möchte Interrupts mittels sti wieder demaskieren
+- Ergebnis:
+	- sti wird in privilegiertem Modus ausgeführt
+	- PSW.IF = 1; Interrupts erfolgreich demaskiert
+
+
+Gedankenexperiment 2: Virtualisierung
+- Annahmen:
+	- BS enthält sti-Instruktion
+	- Aktuell sind für dieses BS virtuelle Interrupts maskiert
+	- BS möchte Interrupts mittels sti wieder demaskieren
+- Ergebnis:
+	- sti wird in unprivilegiertem Modus ausgeführt => Trap!
+	- PSW.IF wird nicht geändert, da Trap ausgelöst wurde
+	- Hypervisor ändert virtuellen Zustand: vPSW.IF = 1; Interrupts für dieses BS erfolgreich demaskiert!
+
+
+- popf (PSW vom Stack laden) $\in$ Ipriv?
+	Nein, kein Trap.
+- popf (PSW vom Stack laden) $\in$ Isens?
+	Ja, verhält sich unterschiedlich je nach Modus (behavior sensitive)!
+=> popf verhindert Virtualisierbarkeit der x86-Architektur!
+
+popf de trap yok ondan virtual olmuyo
+
+
+## Lösung zur Virtualisierung
+- Problem: sensitive Instruktionen im BS, die nicht privilegiert sind
+- Einzige Lösung: Entfernen dieser Instruktionen aus BS
+	1. Anpassungen am BS-Quellcode, so dass dieser statt der problematischen Instruktionen explizite Aufrufe zum Hypervisor enthält („Paravirtualisierung“)
+	2. Binary Translation: BS-Maschinencode wird vor der ersten Kontrollübergabe durch Hypervisor auf problematische Instruktionen untersucht und diese durch explizite Hypervisor-Aufrufe ersetzt
+=> Trap & Emulate-Hypervisor unter diesen Umständen kaum praktikabel, da Overhead viel zu groß
+
+
+## Speicherverwaltung bei voller Virtualisierung
+![[Pasted image 20250719092747.png#invert]]
+
+Umsetzung in Praxis: Shadow page tables
+- Guest OSs verwaltet eigene Seitentabelle (aus Kompabilitätsgründen, wird nicht weiter genutzt)
+- Jede Änderung an dieser Tabelle werden getrappt und die Einträge in die neue Seitentabelle, die von Hypervisor errichtet und verwaltet wird, kopiert → Diese Tabelle nennt man VMM’s shadow page table
+
+![[Pasted image 20250719093154.png#invert]]
+
+
+## Virtualisierung von E/A
+Bei der heute standardmäßig verwendeten Paravirtualisierung kooperieren
+das BS und der Hypervisor
+- BS weiß von der Virtualisierung und erzeugt Aufrufe an den Hypervisor → kein aufwendiges Auffangen mehr notwendig
+- CPU-Unterstützung für Virtualisierung durch zusätzliche Sicherheitsringe / -modi, durch verbesserte MMUs (Memory Management Units), etc.
+
